@@ -4,16 +4,11 @@ from constants import *
 from player import Player
 
 def main():
-    print("Starting Asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
-    
     pygame.init()
-
-    dt = 0
-    clock = pygame.time.Clock()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    clock = pygame.time.Clock()
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    dt = 0
     
     while True:
         for event in pygame.event.get():
@@ -23,6 +18,7 @@ def main():
         screen.fill(SCREEN_COLOR)
         player.draw(screen)
         pygame.display.flip()
+
         dt = clock.tick(GAME_FRAMERATE) / 1000
 
 
