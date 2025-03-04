@@ -20,7 +20,7 @@ def main():
 
         screen.fill("black")
         pygame.display.flip()
-        dt = clock.tick(framerate=60) / 1000
+        dt = clock.tick(GAME_FRAMERATE) / 1000
 
 
 if __name__ == "__main__":
